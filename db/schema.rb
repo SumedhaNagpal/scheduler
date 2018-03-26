@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180324152414) do
+ActiveRecord::Schema.define(version: 20180325192157) do
+
+  create_table "societies", force: :cascade do |t|
+    t.string "society_name"
+    t.text "society_about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "societies_users", id: false, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "society_id", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
