@@ -4,6 +4,18 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :firstName %><br />
+    <%= f.firstName_field :firstName, autofocus: true, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label : branch %><br />
+    <%= f.branch_field :branch, autofocus: true, autocomplete: "off" %>
+    
+  </div>
+
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
