@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404085516) do
+ActiveRecord::Schema.define(version: 20180404190153) do
 
   create_table "societies", force: :cascade do |t|
     t.string "society_name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20180404085516) do
     t.string "last_name", default: "", null: false
     t.string "branch", default: "", null: false
     t.integer "year", default: 0, null: false
+    t.integer "role", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
